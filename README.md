@@ -40,3 +40,17 @@ Setiap perubahan pada index.html atau file workflow di branch main otomatis menj
 
 ### 4. ​IAM Least Privilege (GitHubActionsCloudFrontDeployPolicy): 
 Akun layanan CI/CD hanya memiliki izin spesifik s3:PutObject, s3:DeleteObject, s3:ListBucket pada bucket target serta cloudfront:CreateInvalidation.
+
+---
+
+---
+
+## FinOps & Cloud Cost Governance (AWS Budgets)
+
+Sebagai bagian dari tata kelola operasional (*Cloud Financial Management*) dan penerapan pilar Cost Optimization pada *AWS Well-Architected Framework*, akun AWS ini dilengkapi mekanisme pengawasan biaya proaktif untuk mencegah pembengkakan tagihan (*bill shock*):
+
+* **Zero-Spend Budget Guardrail (Joel-Zero-Spend-Guardrail): Memantau pengeluaran aktual secara otomatis dan mengirimkan notifikasi email instan apabila akumulasi biaya melewati ambang batas $0.01**.
+* AWS Free Tier & Billing Preferences Alerts: Mengaktifkan peringatan otomatis ketika pemakaian layanan mendekati kuota batas gratis (*Free Tier threshold*) serta mengaktifkan integrasi *CloudWatch Billing Alerts*.
+* Resource Lifecycle Hygiene: Seluruh lingkungan pengujian berbiaya per jam (*EC2, ALB, RDS, NAT Gateway, Elastic IP*) melalui prosedur *decommissioning* menyeluruh segera setelah pengujian dan dokumentasi selesai.
+
+![AWS Budgets Zero-Spend Guardrail](screenshots/05-aws-budgets-guardrail.png)
