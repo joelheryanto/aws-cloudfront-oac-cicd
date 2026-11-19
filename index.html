@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joel Heryanto | Cloud Infrastructure & AWS Portfolio</title>
+  <style>
+    :root { --bg: #0f172a; --card: #1e293b; --accent: #38bdf8; --text: #f1f5f9; --muted: #94a3b8; }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+    body { background: var(--bg); color: var(--text); line-height: 1.6; padding: 2rem 1rem; }
+    .container { max-width: 920px; margin: 0 auto; }
+    header { border-bottom: 1px solid #334155; padding-bottom: 1.5rem; margin-bottom: 2rem; }
+    h1 { font-size: 2rem; color: var(--accent); }
+    .subtitle { color: var(--muted); margin-top: 0.4rem; }
+    .badge { display: inline-block; background: #0284c733; color: var(--accent); border: 1px solid #0284c7; padding: 0.2rem 0.65rem; border-radius: 999px; font-size: 0.8rem; margin-top: 0.8rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1.25rem; }
+    .card { background: var(--card); border: 1px solid #334155; border-radius: 10px; padding: 1.25rem; }
+    .card h3 { color: var(--accent); font-size: 1.05rem; margin-bottom: 0.5rem; }
+    .card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .stack { font-size: 0.78rem; color: #cbd5e1; background: #0f172a; padding: 0.4rem 0.6rem; border-radius: 6px; }
+    footer { margin-top: 2.5rem; text-align: center; color: var(--muted); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Joel Heryanto</h1>
+      <p class="subtitle">Cloud Infrastructure & DevOps Portfolio — Surabaya, Indonesia</p>
+      <span class="badge">Delivered via Amazon CloudFront OAC + Private S3 + GitHub Actions CI/CD</span>
+    </header>
+    <section class="grid">
+      <div class="card">
+        <h3>1. Multi-AZ 3-Tier Enterprise Architecture</h3>
+        <p>High-availability web infrastructure with automated scaling, health checks, and private database isolation.</p>
+        <div class="stack">VPC · ALB · Auto Scaling · EC2 · RDS Multi-AZ</div>
+      </div>
+      <div class="card">
+        <h3>2. Kubernetes Cluster via Infrastructure as Code</h3>
+        <p>Declarative cloud provisioning and container orchestration workflow managed via Terraform.</p>
+        <div class="stack">Terraform · Amazon EKS · VPC · IAM</div>
+      </div>
+      <div class="card">
+        <h3>3. Serverless Event-Driven Inventory Pipeline</h3>
+        <p>Asynchronous JSON ingestion triggered by object uploads and exposed via RESTful HTTP endpoints.</p>
+        <div class="stack">S3 · AWS Lambda (Python) · DynamoDB · API Gateway</div>
+      </div>
+      <div class="card">
+        <h3>4. Automated Security Incident Remediation</h3>
+        <p>Real-time detection and automatic revocation of public SSH/RDP Security Group rules with email alerts.</p>
+        <div class="stack">CloudTrail · EventBridge · Lambda · SNS</div>
+      </div>
+      <div class="card">
+        <h3>5. Global Edge CDN & Automated CI/CD</h3>
+        <p>Zero-public-access S3 origin secured with CloudFront OAC and automated invalidation on git push.</p>
+        <div class="stack">CloudFront · S3 OAC · IAM · GitHub Actions</div>
+      </div>
+    </section>
+    <footer>
+      <p>Automated Deployment Pipeline v1.0 · Built on AWS</p>
+    </footer>
+  </div>
+</body>
+</html>
